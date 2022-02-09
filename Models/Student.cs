@@ -12,5 +12,4 @@ public class Student
 
     public EducationLevel EducationLevels { get; set; }
 
-
 }

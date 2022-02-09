@@ -2,10 +2,10 @@
 
 public enum EducationLevel
 {
-    YüksekLisans,
-    Lisans,
-    Önlisans,
-    Lise,
-    Ortaokul,
-    İlkOkul
+    MastersDegree,
+    BachelorDegree,
+    AssociateDegree,
+    HighShool,
+    MiddleSchool,
+    PrimarySchool
 }

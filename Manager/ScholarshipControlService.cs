@@ -1,12 +1,13 @@
 ﻿using Models;
 using Rules.Abstracts;
 using Rules.Concretes;
+using System.Linq;
 
 namespace Manager;
 
 public class ScholarshipControlService
 {
-    private readonly List<IEntitledRule> _rules = new List<IEntitledRule>();
+    private readonly List<IEntitledRule> _rules = new();
 
     public ScholarshipControlService()
     {
@@ -21,9 +22,9 @@ public class ScholarshipControlService
 
     }
 
+
     public bool Control(Student student)
     {
-
         var isEntitled = true;
 
         foreach (var rule in _rules)
@@ -38,5 +39,6 @@ public class ScholarshipControlService
         }
 
         return isEntitled;
+
     }
 }

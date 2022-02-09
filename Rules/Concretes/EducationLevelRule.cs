@@ -2,38 +2,30 @@
 using Models.Enums;
 using Rules.Abstracts;
 
-namespace Rules.Concretes
+namespace Rules.Concretes;
+
+public class EducationLevelRule : IEntitledRule
 {
-    public class EducationLevelRule : IEntitledRule
+
+    public bool CheckScholarship(Student student)
     {
 
-        public bool CheckScholarship(Student student)
+        switch (student.EducationLevels)
         {
 
-            if (student.EducationLevels==EducationLevel.YüksekLisans)
-            {
+            case EducationLevel.MastersDegree:
 
-                return true;
+            case EducationLevel.BachelorDegree:
 
-            }
+            case EducationLevel.AssociateDegree:
+                {
+                    return true;
+                }
 
-            else if (student.EducationLevels==EducationLevel.Lisans)
-            {
-
-                return true;
-
-            }
-
-            else if (student.EducationLevels==EducationLevel.Önlisans)
-            {
-
-                return true;
-
-            }
-
-            Console.WriteLine("Eğitim seviyesi şartlara uymamaktadır. En az Önlisans mezunu olmak zorundasınız.");
-            return false;
+            default: break;
 
         }
+
+        return false;
     }
 }

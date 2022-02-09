@@ -3,15 +3,15 @@ using Models;
 
 var student = new Student
 {
-    EducationLevels=Models.Enums.EducationLevel.Lisans,
+    EducationLevels=Models.Enums.EducationLevel.MastersDegree,
     Age=24,
-    HouseholdIncome=15000,
-    MonthlyIncome=8000
+    HouseholdIncome=4250,
+    MonthlyIncome=999
 };
 
 var calculator = new ScholarshipControlService();
 bool isEntitled = calculator.Control(student);
 
-Console.WriteLine($"Sonuc {isEntitled}");
+Console.WriteLine($"Result :  {isEntitled}");
 
-/*Yukardaki senaryoya göre öğrenciye burs verilmeyecek.*/
+/*Scholarships will not be awarded to students in the above scenario.*/
