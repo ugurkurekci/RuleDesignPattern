@@ -3,10 +3,10 @@ using Models;
 
 var student = new Student
 {
-    EducationLevels=Models.Enums.EducationLevel.MastersDegree,
+    EducationLevels=Models.Enums.EducationLevel.BachelorDegree,
     Age=24,
-    HouseholdIncome=4250,
-    MonthlyIncome=999
+    HouseholdIncome=14000,
+    MonthlyIncome=5000
 };
 
 var calculator = new ScholarshipControlService();
